@@ -1,0 +1,52 @@
+<div class="header container-fluid justify-content-center row m-0"
+     style="margin-bottom: 1rem;position: sticky;top: 0;z-index: 99">
+  <div class="row d-flex justify-content-between w-100 container">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link h3 font-weight-bold text-title" routerLink="">Codegym <span
+                class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a class="nav-link text-dark" routerLink="">Home</a>
+            </li>
+            <li class="nav-item dropdown m-2">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="ticket" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ticket
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="/ticket">Display ticket list</a>
+                <a class="dropdown-item" routerLink="/ticket/create">Add new ticket</a>
+              </div>
+            </li>
+            <li class="nav-item m-2">
+              <a class="nav-link text-dark" href="#" routerLink="/login">Details</a>
+            </li>
+            <li class="nav-item m-2">
+              <a class="nav-link text-dark" href="#" routerLink="/login">About</a>
+            </li>
+            <li class="nav-item m-2">
+              <a class="nav-link text-dark" href="#" routerLink="/chat">Chat</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div style="left: 0; margin: 1rem">
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" style="background-color: #f2f2f2" type="search" placeholder="Search"
+               aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+        <button *ngIf="!isLoggedIn()" class="btn btn-outline-dark my-2 my-sm-0" type="submit"
+                style="margin-left: 1.6rem">Sign up
+        </button>
+        <button *ngIf="!isLoggedIn()" class="btn my-2 my-sm-0" routerLink="/login">Sign in</button>
+        <button *ngIf="isLoggedIn()" class="btn my-2 my-sm-0 btn-outline-dark ml-2">{{userName}}</button>
+        <button *ngIf="isLoggedIn()" class="btn my-2 my-sm-0" routerLink="/logout">Sign out</button>
+      </div>
+    </div>
+  </div>
+</div>

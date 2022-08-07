@@ -1,0 +1,5 @@
+<div class="mb-3">
+  <label for="formFile" class="form-label">Default file input example</label>
+  <input (change)="selectFile($event)" class="form-control" type="file" id="formFile">
+  <button class="btn btn-sm btn-primary" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+</div>
